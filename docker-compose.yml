@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  redis-firewalled:
+    build: .
+    container_name: redis-firewalled
+    image: redis-firewalled
+    ports:
+      - "6379:6379"
+    cap_add:
+      - NET_ADMIN
+
